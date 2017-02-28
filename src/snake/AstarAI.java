@@ -10,12 +10,24 @@ import java.util.PriorityQueue;
  *
  */
 public class AstarAI {
-	int xpos;
-	int ypos;
+	ThreadsController threadsController;
 	
-	public AstarAI(int xpos, int ypos){
-		this.xpos = xpos;
-		this.ypos = ypos;
+	public AstarAI(ThreadsController threadsController){
+		this.threadsController = threadsController;
+	}
+	
+	/**
+	 * Finds shortest path to the apple
+	 */
+	public void findShortestPathToApple(){
+		//TODO: finish this method. Not sure what return type should be
+	}
+	
+	/**
+	 * Finds longest path to the tail
+	 */
+	public void findLongestPathToTail(){
+		//TODO: finish this method. Not sure what return type should be
 	}
 	
 	public void astarSearch(NewWorld world, int heuristic) {
