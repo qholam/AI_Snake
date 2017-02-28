@@ -105,8 +105,8 @@ public class ThreadsController extends Thread {
 	 //return a position not occupied by the snake
 	 private Tuple getValAleaNotInSnake(){
 		 Tuple p ;
-		 int ranX= 0 + (int)(Math.random()*19); 
-		 int ranY= 0 + (int)(Math.random()*19); 
+		 int ranX= 1 + (int)(Math.random()*19); 
+		 int ranY= 1 + (int)(Math.random()*19); 
 		 p=new Tuple(ranX,ranY);
 		 for(int i = 0;i<=positions.size()-1;i++){
 			 if(p.getY()==positions.get(i).getX() && p.getX()==positions.get(i).getY()){
