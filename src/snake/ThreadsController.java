@@ -33,12 +33,25 @@ public class ThreadsController extends Thread {
 	 
 	 //Important part :
 	 public void run() {
+		 setBorder();
 		 while(true){
 			 moveInterne(directionSnake);
 			 checkCollision();
 			 moveExterne();
 			 deleteTail();
 			 pauser();
+		 }
+	 }
+	 
+	 //Added
+	 private void setBorder()
+	 {
+		 for(int i=0; i < 20; i++)
+		 {
+			 Squares.get(0).get(i).lightMeUp(3);
+			 Squares.get(i).get(0).lightMeUp(3);
+			 Squares.get(19).get(i).lightMeUp(3);
+			 Squares.get(i).get(19).lightMeUp(3);
 		 }
 	 }
 	 
