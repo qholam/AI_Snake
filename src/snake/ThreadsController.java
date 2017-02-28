@@ -60,6 +60,11 @@ public class ThreadsController extends Thread {
 				stopTheGame();
 			 }
 		 }
+		 //Added a bounds for the game, cs4233 Team9
+		 if(headSnakePos.getX() == 19 || headSnakePos.getY() == 19)
+		 {
+			 stopTheGame();
+		 }
 		 
 		 boolean eatingFood = posCritique.getX()==foodPosition.y && posCritique.getY()==foodPosition.x;
 		 if(eatingFood){
@@ -104,6 +109,7 @@ public class ThreadsController extends Thread {
 	 //Moves the head of the snake and refreshes the positions in the arraylist
 	 //1:right 2:left 3:top 4:bottom 0:nothing
 	 private void moveInterne(int dir){
+		 
 		 switch(dir){
 		 	case 4:
 				 headSnakePos.ChangeData(headSnakePos.x,(headSnakePos.y+1)%20);
