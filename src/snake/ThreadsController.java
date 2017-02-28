@@ -26,7 +26,7 @@ public class ThreadsController extends Thread {
 		Tuple headPos = new Tuple(headSnakePos.getX(),headSnakePos.getY());
 		positions.add(headPos);
 		
-		foodPosition= new Tuple(Window.height-1,Window.width-1);
+		foodPosition= new Tuple(Window.height-2,Window.width-2);
 		spawnFood(foodPosition);
 
 	 }
