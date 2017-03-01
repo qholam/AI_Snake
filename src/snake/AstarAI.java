@@ -30,6 +30,19 @@ public class AstarAI {
 		//TODO: finish this method. Not sure what return type should be
 	}
 	
+	public double getHeuristic(double gx, double gy, double px, double py, double tx, double ty){
+		double hVal = 0; //manhattan to goal + line to goal - manhattan to tail - line to tail
+		double h1 = 0; //manhattan to goal
+		double h2 = 0; //manhattan to tail
+		double h3 = 0; //line to goal
+		double h4 = 0; //line to tail
+		h1 = Math.abs(gx - px) + Math.abs(gy - py);
+		h2 = Math.abs(tx - px) + Math.abs(ty - py);
+		h3 = Math.sqrt(Math.pow((gx - px), 2) + Math.pow(gy - py, 2));
+		h4 = Math.sqrt(Math.pow((tx - px), 2) + Math.pow(ty - py, 2));
+		hVal = h1 - h2 + h3 - h4;
+		return hVal;
+	}
     /**
      * The main A Star Algorithm in Java.
      *
