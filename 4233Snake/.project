@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>4233snake</name>
+	<name>4233Snake</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -14,4 +14,10 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<variableList>
+		<variable>
+			<name>copy_PROJECT_LOC</name>
+			<value>$%7BPARENT-1-PROJECT_LOC%7D/TRY4</value>
+		</variable>
+	</variableList>
 </projectDescription>
