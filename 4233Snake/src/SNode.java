@@ -1,7 +1,6 @@
 import java.awt.*;
 
-public class SNode extends Object
-{
+public class SNode {
 	private int x;
 	private int y;
 	private int dir;
@@ -67,9 +66,12 @@ public class SNode extends Object
 	 */
 	@Override
 	public boolean equals(Object obj) {
+            
+            if(obj instanceof SNode){
 		SNode other = (SNode) obj;
-		if (this.x == other.x && this.y == other.y)
+                if (this.x == other.x && this.y == other.y)
 			return true;
+            }
 		return false;
 	}
 }

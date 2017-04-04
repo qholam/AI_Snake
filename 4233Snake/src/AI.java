@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
  * @author CS4341 Group 9
  *
  */
-public class AI {
+public class AI implements Algorithm{
 
 	private Snake snk;
 	int x; 
@@ -29,7 +29,8 @@ public class AI {
 		height = snk.height;
 		width = snk.width;
 	}
-
+        
+        @Override
 	public void run() throws InterruptedException
 	{
 		ArrayList<Integer> path = this.getShortestPath();
@@ -48,6 +49,7 @@ public class AI {
 	 * Simulates current move and returns true if move can be made without causing the game to end
 	 * before player wins.
 	 */
+        @Override
 	public boolean SimulateMoves(ArrayList<Integer> directions) {
 		ArrayList<SNode> snakeClone = new ArrayList<SNode>();
 		for(SNode s: snk.getSnake()){
@@ -100,6 +102,7 @@ public class AI {
 	 * @return
 	 */
 	//TODO: this can be significantly improved
+        @Override
 	public ArrayList<Integer> getLongestPathToTail(){
 		ArrayList<Integer> directions = new ArrayList<Integer>();
 		SNode head = snk.getHead();
@@ -135,6 +138,7 @@ public class AI {
 	 * and the food.
 	 * @return
 	 */
+        @Override
 	public ArrayList<Integer> getShortestPath(){
 		//ArrayList<SNode> path = new ArrayList<SNode>();
 		ArrayList<Integer> directions = new ArrayList<Integer>();
@@ -202,6 +206,7 @@ public class AI {
 	 * @param s
 	 * @return
 	 */
+        @Override
 	public int getHeuristic(SNode s){
 		int h;
 		
@@ -274,6 +279,7 @@ public class AI {
 		return neighbor;
 	}
 	
+        @Override
 	public ArrayList<SNode> validate(ArrayList<SNode> a){
 		for(int i = a.size()-1; i >=0; i--){
 			if(x >= width || x < 0 || y >= height || y < 0){

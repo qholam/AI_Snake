@@ -293,8 +293,9 @@ public class Snake extends JPanel {
 		snk.requestFocus(); // JPanel
 		// Added
 		while (isGameOn) {
-			AI ai = new AI(snk);
-			ai.run();
+			//AI ai = new AI(snk);
+			Algorithm ai = new AI(snk);
+                        ai.run();
 		}
 		System.out.println("done?");
 	}
