@@ -1,5 +1,6 @@
 
-import java.util.ArrayList;
+
+
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -11,13 +12,24 @@ import java.util.ArrayList;
  *
  * @author Pichau
  */
-public interface Algorithm {
+
+public abstract class Algorithm implements Command {    
     
-    public boolean SimulateMoves(ArrayList<Integer> directions);
-    public ArrayList<Integer> getLongestPathToTail();
-    public ArrayList<Integer> getShortestPath();
-    public int getHeuristic(SNode s);
-    public ArrayList<SNode> generateNeighbors(SNode cur);
-    public ArrayList<SNode> validate(ArrayList<SNode> a);
-    public void run() throws InterruptedException;
+    private Snake snake;
+
+    public Algorithm() {        
+    }
+
+    public Algorithm(Snake snake) {
+        this.snake = snake;
+    }
+
+    public Snake getSnake() {
+        return snake;
+    }
+
+    public void setSnake(Snake snake) {
+        this.snake = snake;
+    }
+        
 }
