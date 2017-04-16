@@ -380,7 +380,7 @@ public class Snakebakeup extends JPanel {
 		AI ai = new AI(snk);
 		while (isGameOn) {
 			TimeUnit.MILLISECONDS.sleep(200);
-			ai.randomMove();
+			//ai.randomMove();
 		}
 	}
 }
